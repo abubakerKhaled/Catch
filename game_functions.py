@@ -2,6 +2,21 @@ import sys
 import pygame
 
 
+def check_keydown_event(event, character):
+    if event.key == pygame.K_RIGHT:
+        character.moveing_right = True
+    elif event.key == pygame.K_LEFT:
+        character.moveing_left = True
+
+
+def check_keyup_event(event, character):
+    if event.key == pygame.K_RIGHT:
+        character.moveing_right = False
+
+    elif event.key == pygame.K_LEFT:
+        character.moveing_left = False
+
+
 def check_events(character):
     """Responds to keypresses and mouse events."""
     for event in pygame.event.get():
@@ -10,18 +25,11 @@ def check_events(character):
 
         # If the key down
         elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_RIGHT:
-                character.moveing_right = True
-            elif event.key == pygame.K_LEFT:
-                character.moveing_left = True
+            check_keydown_event(event, character)
 
         # If the key up
         elif event.type == pygame.KEYUP:
-            if event.key == pygame.K_RIGHT:
-                character.moveing_right = False
-
-            elif event.key == pygame.K_LEFT:
-                character.moveing_left = False
+            check_keyup_event(event, character)
 
 
 def update_screen(c_settings, screen, character):
