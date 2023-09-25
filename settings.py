@@ -1,4 +1,4 @@
-class Settings():
+class Settings:
     """A class to store all settings for catch."""
 
     def __init__(self):
@@ -11,3 +11,4 @@ class Settings():
 
         # Character settings
         self.character_speed_facter = 1
+        self.character_speed_facter = 1.5

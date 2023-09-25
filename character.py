@@ -17,16 +17,23 @@ class Character:
         self.rect.centerx = self.screen_rect.centerx
         self.rect.bottom = self.screen_rect.bottom
 
+        # Store a decimal value for the character's center.
+        self.center = float(self.rect.centerx)
+
         # Movement flags
         self.moveing_right = False
         self.moveing_left = False
 
     def update(self):
         """Update the character's movements based on the movement flags."""
+        # Update the character center value not the rect.
         if self.moveing_right:
-            self.rect.centerx += 1
+            self.center += self.c_settings.character_speed_facter
         if self.moveing_left:
-            self.rect.centerx -= 1
+            self.center -= self.c_settings.character_speed_facter
+
+        # Update the rect object from self.center
+        self.rect.centerx = self.center
 
     def blitme(self):
         """Draw the character in its current position."""
