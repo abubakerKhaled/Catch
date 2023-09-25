@@ -27,9 +27,9 @@ class Character:
     def update(self):
         """Update the character's movements based on the movement flags."""
         # Update the character center value not the rect.
-        if self.moveing_right:
+        if self.moveing_right and self.rect.right < self.screen_rect.right:
             self.center += self.c_settings.character_speed_facter
-        if self.moveing_left:
+        if self.moveing_left and self.rect.left > 0:
             self.center -= self.c_settings.character_speed_facter
 
         # Update the rect object from self.center
