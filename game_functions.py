@@ -11,17 +11,17 @@ def check_events(character):
         # If the key down
         elif event.type == pygame.KEYDOWN:
             if event.key == pygame.K_RIGHT:
-                character.moving_right = True
-            if event.key == pygame.K_LEFT:
-                character.moving_left = True
+                character.moveing_right = True
+            elif event.key == pygame.K_LEFT:
+                character.moveing_left = True
 
         # If the key up
         elif event.type == pygame.KEYUP:
             if event.key == pygame.K_RIGHT:
-                character.moving_right = False
+                character.moveing_right = False
 
-            if event.key == pygame.K_LEFT:
-                character.moving_left = False
+            elif event.key == pygame.K_LEFT:
+                character.moveing_left = False
 
 
 def update_screen(c_settings, screen, character):

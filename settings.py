@@ -11,4 +11,4 @@ class Settings:
 
         # Character settings
         self.character_speed_facter = 1
-        self.character_speed_facter = 1.5
+        self.character_speed_facter = 1.1
