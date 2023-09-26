@@ -12,3 +12,6 @@ class Settings:
         # Character settings
         self.character_speed_facter = 1
         self.character_speed_facter = 1.1
+
+        # Ball settings
+        self.ball_speed_factor = 0.5

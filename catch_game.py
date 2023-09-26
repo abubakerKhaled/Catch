@@ -26,6 +26,7 @@ def run_game():
     while True:
         gf.check_events(character)
         character.update()
+        ball.update()
         gf.update_screen(c_settings, screen, character, ball)
 
 
