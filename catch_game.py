@@ -5,6 +5,7 @@ import pygame
 from settings import Settings
 from character import Character
 import game_functions as gf
+from ball import Ball
 
 
 def run_game():
@@ -20,10 +21,12 @@ def run_game():
     # Make a character
     character = Character(c_settings, screen)
 
+    ball = Ball(c_settings, screen)
+
     while True:
         gf.check_events(character)
         character.update()
-        gf.update_screen(c_settings, screen, character)
+        gf.update_screen(c_settings, screen, character, ball)
 
 
 if __name__ == "__main__":
