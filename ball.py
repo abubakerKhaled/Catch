@@ -14,10 +14,10 @@ class Ball(Sprite):
         self.c_settings = c_settings
         self.screen = screen
         self.speed_factor = self.c_settings.ball_speed_factor
+        self.color = c_settings.ball_color
 
         # Load the ball image and get its rect
-        self.image = pygame.image.load("images/ball.png")
-        self.rect = self.image.get_rect()
+        self.rect = pygame.Rect(0, 0, c_settings.ball_width, c_settings.ball_height)
         self.screen_rect = self.screen.get_rect()
 
         # Start each ball at the top of the screen with random position.
@@ -37,4 +37,4 @@ class Ball(Sprite):
 
     def blitme(self):
         """Draw the ball at the top of the screen."""
-        self.screen.blit(self.image, self.rect)
+        pygame.draw.rect(self.screen, self.color, self.rect)

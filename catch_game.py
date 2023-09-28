@@ -31,11 +31,13 @@ def run_game():
         gf.check_events(c_settings, screen, character, new_ball)
         character.update()
         new_ball.update()
+
         # Check if the ball has go down to the screen.
         if new_ball.rect.y > c_settings.screen_height:
             new_ball.kill()
             new_ball = Ball(c_settings, screen)
             balls.add(new_ball)
+
         gf.update_screen(c_settings, screen, character, new_ball)
 
 

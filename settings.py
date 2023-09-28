@@ -15,3 +15,6 @@ class Settings:
 
         # Ball settings
         self.ball_speed_factor = 0.5
+        self.ball_width = 3
+        self.ball_height = 15
+        self.ball_color = 60, 60, 60
