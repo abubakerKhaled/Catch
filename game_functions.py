@@ -1,5 +1,6 @@
 import sys
 import pygame
+from ball import Ball
 
 
 def check_keydown_event(event, character):
@@ -18,7 +19,7 @@ def check_keyup_event(event, character):
         character.moveing_left = False
 
 
-def check_events(character):
+def check_events(c_settings, screen, character, balls):
     """Responds to keypresses and mouse events."""
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
@@ -39,3 +40,7 @@ def update_screen(c_settings, screen, character, ball):
     character.blitme()
     ball.blitme()
     pygame.display.flip()
+
+
+# def check_ball(c_settings, screen, balls, new_ball):
+#     """"""
