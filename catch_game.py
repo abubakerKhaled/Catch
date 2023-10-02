@@ -1,7 +1,5 @@
 # Import syntax
 import pygame
-
-# import sys
 from settings import Settings
 from character import Character
 import game_functions as gf
@@ -33,10 +31,16 @@ def run_game():
         new_ball.update()
 
         # Check if the ball has go down to the screen.
-        if new_ball.rect.y > c_settings.screen_height:
+        if new_ball.rect.y > c_settings.screen_height or pygame.sprite.spritecollide(
+            character, balls, True
+        ):
             new_ball.kill()
             new_ball = Ball(c_settings, screen)
             balls.add(new_ball)
+
+        # Check ball have hited the character.
+        # If so, get rid of the ball and regenerate it again.
+        # collisions =
 
         gf.update_screen(c_settings, screen, character, new_ball)
 

@@ -21,7 +21,7 @@ class Ball(Sprite):
         self.screen_rect = self.screen.get_rect()
 
         # Start each ball at the top of the screen with random position.
-        self.top_position = random.randint(1, self.c_settings.screen_width)
+        self.top_position = random.randint(10, self.c_settings.screen_width - 10)
         self.rect.top = self.screen_rect.top
         self.rect.centerx = self.top_position
 

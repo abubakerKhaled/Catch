@@ -40,7 +40,3 @@ def update_screen(c_settings, screen, character, ball):
     character.blitme()
     ball.blitme()
     pygame.display.flip()
-
-
-# def check_ball(c_settings, screen, balls, new_ball):
-#     """"""
