@@ -18,3 +18,5 @@ class Settings:
         self.ball_width = 3
         self.ball_height = 15
         self.ball_color = 60, 60, 60
+
+        self.left_tryes = 3

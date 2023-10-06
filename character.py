@@ -38,3 +38,7 @@ class Character:
     def blitme(self):
         """Draw the character in its current position."""
         self.screen.blit(self.image, self.rect)
+
+    def character_center(self):
+        """Center the character at the center of the screen."""
+        self.center = self.screen_rect.centerx

@@ -1,1 +1,2 @@
-balls
+character.update()
+        new_ball.update()
